@@ -5,8 +5,7 @@ import { DiamondComponent } from './diamond/diamond.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'home', component: AboutComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'diamond', component: DiamondComponent },
-  { path: '**', redirectTo: '' }
+  { path: 'home', component: AboutComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'diamond', component: DiamondComponent}
 ];
