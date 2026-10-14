@@ -1,0 +1,28 @@
+<h1 class="h3">A rombusz területének kiszámítása</h1>
+
+<img src="rombusz_atlokkal.png" alt="Rombusz az e és f átlóval"
+  class="img-fluid mb-3">
+
+<form [formGroup]="diamondForm" (ngSubmit)="startCalc()">
+  <div class="mb-3">
+    <label for="diagonal-e" class="form-label">Az e átló hossza</label>
+    <input id="diagonal-e" class="form-control"
+      formControlName="diagonal_e" (input)="clearResult()" >
+  </div>
+  <div class="mb-3">
+    <label for="diagonal-f" class="form-label">Az f átló hossza</label>
+    <input id="diagonal-f"  class="form-control"
+      formControlName="diagonal_f" (input)="clearResult()">
+  </div>
+  <button type="submit" class="btn btn-primary">Terület kiszámítása</button>
+
+  @if (error) {
+    <p class="alert alert-danger mt-3" >{{ error }}</p>
+  }
+  @if (showArea) {
+    <div class="mt-3">
+      <label for="area" class="form-label">A rombusz területe </label>
+      <input id="area"  class="form-control" formControlName="area" readonly>
+    </div>
+  }
+</form>
